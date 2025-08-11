@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: clamp(16px, 2vw, 18px);
   background-color: #0a0a0a;
   position: relative;
@@ -417,7 +416,7 @@ body {
   margin: clamp(20px, 5vw, 40px);
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 900;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Exo 2", sans-serif;
   text-shadow: 0 0 20px rgba(65, 105, 225, 0.5);
 }
 
@@ -436,7 +435,7 @@ body {
   box-shadow: 0 4px 15px rgba(65, 105, 225, 0.4);
   position: relative;
   overflow: hidden;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Exo 2", sans-serif;
 }
 
 .button:hover {
@@ -485,6 +484,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   position: relative;
+  font-family: "Exo 2", sans-serif;
 }
 
 .section-title::after {
@@ -766,6 +766,7 @@ body {
   margin-bottom: 15px;
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(65, 105, 225, 0.3);
+  font-family: "Exo 2", sans-serif;
 }
 
 .project-description {
@@ -856,6 +857,7 @@ body {
   font-weight: 700;
   margin-bottom: 10px;
   text-shadow: 0 0 10px rgba(65, 105, 225, 0.3);
+  font-family: "Exo 2", sans-serif;
 }
 
 .education-content p {
@@ -905,6 +907,7 @@ body {
   margin-bottom: 20px;
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(65, 105, 225, 0.5);
+  font-family: "Exo 2", sans-serif;
 }
 
 .contact-description {
@@ -962,6 +965,7 @@ body {
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: "Exo 2", sans-serif;
 }
 
 .connect-button:hover {
@@ -1032,6 +1036,24 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .header h1 {
+    font-size: clamp(28px, 4.5vw, 40px);
+  }
+
+  .section-title {
+    font-size: clamp(24px, 4.5vw, 36px);
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   .about-content {
       grid-template-columns: 1fr;
@@ -1073,6 +1095,11 @@ body {
       width: 100px; /* Adjusted for smaller screens */
       height: 100px;
   }
+
+  .profile-image-container {
+    height: auto;
+    width: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1092,6 +1119,80 @@ body {
   .social-link {
       width: 90px; /* Further adjusted for very small screens */
       height: 90px;
+  }
+
+  .header {
+    min-height: 80vh;
+    padding: 10px;
+  }
+
+  .button {
+    width: clamp(150px, 45vw, 200px);
+    font-size: clamp(14px, 4vw, 18px);
+    margin: 6px;
+  }
+
+  .section {
+    min-height: auto;
+    padding: clamp(20px, 5vw, 40px);
+  }
+
+  .section-title {
+    font-size: clamp(20px, 6vw, 28px);
+  }
+
+  .description {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+
+  .stat-number {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  .stat-label {
+    font-size: clamp(10px, 3vw, 12px);
+  }
+
+  .skill-name {
+    font-size: clamp(12px, 3.5vw, 14px);
+  }
+
+  .project-title {
+    font-size: clamp(16px, 5vw, 20px);
+  }
+
+  .project-description {
+    font-size: clamp(12px, 3.5vw, 14px);
+  }
+
+  .education-content h3 {
+    font-size: clamp(18px, 5vw, 22px);
+  }
+
+  .education-content p {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+
+  .contact-title {
+    font-size: clamp(20px, 5.5vw, 26px);
+  }
+
+  .contact-description {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+
+  .connect-button {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+
+  .social-link img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-link span {
+    font-size: 12px;
   }
 }
 
@@ -1168,4 +1269,3 @@ body:not(.keyboard-navigation) *:focus {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
