@@ -1,3 +1,6 @@
+
+
+   
 document.addEventListener("DOMContentLoaded", () => {
   // Modern Geometric Wireframe Background Generator
   function createGeometricBackground() {
@@ -113,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           const dots = document.querySelectorAll(".floating-dot");
           dots.forEach((dot) => {
-              dot.style.opacity = Number.parseFloat(dot.style.opacity || 0.4) * intensity;
+              dot.style.opacity = Number.parseFloat(dot.style.opacity|| 0.4) * intensity;
           });
       }
 
@@ -341,3 +344,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   });
 });
+   
