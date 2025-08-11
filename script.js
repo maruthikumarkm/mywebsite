@@ -1,4 +1,4 @@
- document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
             // Modern Geometric Wireframe Background Generator
             function createGeometricBackground() {
                 const trianglesContainer = document.getElementById("triangles-container");
@@ -99,11 +99,29 @@
 
             function animateSkillBars() {
                 const progressBars = document.querySelectorAll(".skill-progress-bar");
-                progressBars.forEach((bar) => {
+                progressBars.forEach((bar, index) => {
                     const width = bar.getAttribute("data-width");
+                    const percentageElement = bar.parentElement.nextElementSibling;
+                    
+                    percentageElement.textContent = "0%";
+                    
                     setTimeout(() => {
                         bar.style.width = width + "%";
-                    }, 200);
+                        
+                        let currentPercentage = 0;
+                        const targetPercentage = parseInt(width);
+                        const increment = targetPercentage / 60; // 60 frames for smooth animation
+                        
+                        const percentageAnimation = setInterval(() => {
+                            currentPercentage += increment;
+                            if (currentPercentage >= targetPercentage) {
+                                currentPercentage = targetPercentage;
+                                clearInterval(percentageAnimation);
+                            }
+                            percentageElement.textContent = Math.round(currentPercentage) + "%";
+                        }, 25); // Update every 25ms for smooth animation
+                        
+                    }, 200 + (index * 100)); // Stagger animation for each skill
                 });
             }
 
