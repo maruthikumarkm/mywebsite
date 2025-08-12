@@ -191,12 +191,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const progressBars = document.querySelectorAll(".skill-progress-bar");
         progressBars.forEach((bar) => {
             const width = bar.getAttribute("data-width");
-            bar.style.transition = "none"; // Reset transition
-            bar.style.width = "0"; // Reset width
             setTimeout(() => {
-                bar.style.transition = "width 1.5s ease-out"; // Apply transition
-                bar.style.width = width + "%"; // Animate to target width
-            }, 50); // Small delay to ensure reset is applied
+                bar.style.width = width + "%";
+            }, 200);
         });
     }
 
