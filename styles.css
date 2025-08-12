@@ -660,7 +660,6 @@ nav {
   border-radius: 3px;
   overflow: hidden;
   margin-bottom: 10px;
-  position: relative;
 }
 
 .skill-progress-bar {
@@ -668,19 +667,14 @@ nav {
   background: linear-gradient(45deg, #4169e1, #87ceeb);
   border-radius: 3px;
   width: 0;
-  transition: width 1.5s ease-out;
+  transition: width 2s ease-in-out;
   box-shadow: 0 0 10px rgba(65, 105, 225, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .skill-percentage {
   color: #87ceeb;
   font-size: 12px;
   font-weight: 600;
-  display: block;
-  text-align: right;
 }
 
 /* Projects Section */
