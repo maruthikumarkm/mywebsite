@@ -420,6 +420,13 @@ body {
   text-shadow: 0 0 20px rgba(65, 105, 225, 0.5);
 }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
 .button {
   height: clamp(50px, 6vw, 60px);
   width: clamp(180px, 20vw, 220px);
@@ -653,6 +660,7 @@ body {
   border-radius: 3px;
   overflow: hidden;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .skill-progress-bar {
@@ -660,14 +668,19 @@ body {
   background: linear-gradient(45deg, #4169e1, #87ceeb);
   border-radius: 3px;
   width: 0;
-  transition: width 2s ease-in-out;
+  transition: width 1.5s ease-out;
   box-shadow: 0 0 10px rgba(65, 105, 225, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .skill-percentage {
   color: #87ceeb;
   font-size: 12px;
   font-weight: 600;
+  display: block;
+  text-align: right;
 }
 
 /* Projects Section */
@@ -1060,6 +1073,10 @@ body {
       text-align: center;
   }
 
+  .profile-image-container {
+    margin: 0 auto;
+  }
+
   .stats-grid {
       grid-template-columns: 1fr;
   }
@@ -1108,7 +1125,7 @@ body {
   }
 
   .skills-container {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
   .project-links {
@@ -1227,10 +1244,6 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, #2e4a9e, #4682b4);
-}
-
-.moommm {
-  border-radius: 10px;
 }
 
 .ripple {
